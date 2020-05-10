@@ -1,0 +1,38 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="starter-web-api" type="Library" version="00.00.01">
+      <friendlyName>starter-web-api</friendlyName>
+      <description>A starter Web API project by and for the DNN Comnmunity</description>
+      <iconFile />
+      <owner>
+        <name>DNN Community</name>
+        <organization>DNN Community</organization>
+        <url>https://dnncommunity.org</url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">09.05.00</dependency>
+      </dependencies>
+      <components>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/starter-web-api</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>starter-web-api.dll</name>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

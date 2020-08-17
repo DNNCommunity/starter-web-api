@@ -29,15 +29,11 @@ namespace starter_web_api.Controllers
         [DnnAuthorize()]
         [HttpPost()]
         [ValidateAntiForgeryToken()]
-        public HttpResponseMessage DnnGoodbye(DetailsModel data)
+        public HttpResponseMessage DnnHelloPersonalize(DetailsModel data)
         {
             try
             {
-                string dnnMessage = "Hello from Dnn!";
-                if (data.goodbye)
-                {
-                    dnnMessage = "Goodbye from Dnn!";
-                }
+                string dnnMessage = "Hello " + data.name + " from DNN!";
                 return Request.CreateResponse(HttpStatusCode.OK, dnnMessage);
             }
             catch (System.Exception ex)

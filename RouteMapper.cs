@@ -1,6 +1,6 @@
 ﻿using DotNetNuke.Web.Api;
 
-namespace starter_web_api.Services
+namespace starter_web_api
 {
     public class RouteMapper : IServiceRouteMapper
     {
@@ -10,7 +10,7 @@ namespace starter_web_api.Services
             "starter-web-api",
             "default",
             "{controller}/{action}",
-            new string[] { "starter_web_api.Services" });
+            new string[] { "starter_web_api.Controllers" });
         }
     }
 }

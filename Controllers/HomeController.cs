@@ -3,12 +3,12 @@ using System.Net;
 using System.Net.Http;
 using DotNetNuke.Web.Api;
 using DotNetNuke.Services.Exceptions;
+using starter_web_api.Models;
 
-namespace starter_web_api.Services
+namespace starter_web_api.Controllers
 {
-    public class MyController : ControllerBase
+    public class HomeController : DnnApiController
     {
-        #region "API Endpoints"
         [DnnAuthorize()]
         [HttpGet()]
         public HttpResponseMessage DnnHello()
@@ -29,7 +29,7 @@ namespace starter_web_api.Services
         [DnnAuthorize()]
         [HttpPost()]
         [ValidateAntiForgeryToken()]
-        public HttpResponseMessage DnnGoodbye(DetailsDTO data)
+        public HttpResponseMessage DnnGoodbye(DetailsModel data)
         {
             try
             {
@@ -47,13 +47,5 @@ namespace starter_web_api.Services
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
-        #endregion
-
-        #region "DTO Classes"
-        public class DetailsDTO
-        {
-            public bool goodbye { get; set; }
-        }
-        #endregion
     }
 }

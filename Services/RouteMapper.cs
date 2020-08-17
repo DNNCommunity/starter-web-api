@@ -2,7 +2,7 @@
 
 namespace starter_web_api.Services
 {
-    public class RouterMapper : IServiceRouteMapper
+    public class RouteMapper : IServiceRouteMapper
     {
         public void RegisterRoutes(IMapRoute mapRouteManager)
         {

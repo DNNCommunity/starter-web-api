@@ -64,7 +64,7 @@ This stand-alone Web API is configured with three endpoints.
 #### DnnHello (GET)
 
 ```
-http://yourdomain.com/DesktopModules/starter-web-api/API/My/DnnHello
+http://yourdomain.com/API/starter-web-api/Home/DnnHello
 
 RESPONSE
 "Hello from Dnn!"
@@ -74,35 +74,21 @@ This endpoint uses the `[DnnAuthorize()]` DNN Web API attribute for authorizatio
 the DNN instance by an authenticated user.  That said, this endpoint can be tested in a browser tab if you are already logged in 
 with an active DNN session on the instance the extension is installed.
 
-#### DnnGoodbye (POST)
+#### DnnHelloPersonalize (POST)
 
 ```
-http://yourdomain.com/DesktopModules/starter-web-api/API/My/DnnGoodbye
+http://yourdomain.com/API/starter-web-api/Home/DnnHelloPersonalize
 
 POST DATA
-goodbye: true/false
+name: string
 
 RESPONSE
-"Hello from Dnn!" (if goodbye false)
-"Goodbye from Dnn!" (if goodbye true)
+"Hello <name> from Dnn!"
 ```
 
 This endpoint also uses the `[DnnAuthorize()]` DNN Web API attribute for authorization.
 In addition, it uses the `[ValidateAntiForgeryToken()]` attribute since this is a POST 
 action and we need to protect against Cross Site request Forgery (CSRF) attacks.  
-
-#### KeepAlive (GET)
-
-```
-http://yourdomain.com/DesktopModules/starter-web-api/API/My/KeepAlive
-
-RESPONSE
-"True"
-```
-
-This endpoint uses the `[DnnAuthorize()]` DNN Web API attribute for authorization.  This means the endpoint must be called within 
-the DNN instance by an authenticated user.  That said, this endpoint can be tested in a browser tab if you are already logged in 
-with an active DNN session on the instance the extension is installed.
 
 #### Additional Notes Regarding Authorization
 There are other attributes available for various levels of authorization within the DNN Services Framework (e.g., AllowAnonymous, 

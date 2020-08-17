@@ -7,6 +7,6 @@ namespace starter_web_api.Models
 {
     public class DetailsModel
     {
-        public bool goodbye { get; set; }
+        public string name { get; set; }
     }
 }

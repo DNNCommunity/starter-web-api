@@ -8,7 +8,7 @@
     <!-- Reusable variables -->
     <PropertyGroup>
       <ProjectName>starter-web-api</ProjectName>
-      <WebsiteFolder>..\Instances\dnn961\Website</WebsiteFolder>
+      <WebsiteFolder>Website</WebsiteFolder>
       <DeployFolder>$(WebsiteFolder)\DesktopModules\starter-web-api</DeployFolder>
       <PackageFolder>Package</PackageFolder>
       <PackageResourcesFolder>$(PackageFolder)\Resources</PackageResourcesFolder>
